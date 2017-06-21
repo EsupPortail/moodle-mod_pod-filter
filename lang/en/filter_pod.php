@@ -1,10 +1,10 @@
 <?php // $Id$
-// English language string for filter/PodLille1.
+// English language string for filter/Pod.
 
-$string['filtername']   = 'PodLille1 URLs';
+$string['filtername']   = 'Pod URLs';
 $string['url']          = "URL";
 $string['url_desc']     = "POD's server URL, without http(s)://.";
-$string['url_help']     = "It's the URL of the POD server.<br> (default value = pod.univ-lille1.fr)";
+$string['url_help']     = "It's the URL of the POD server.<br> (default value = pod.univ.fr)";
 $string['size']         = "Video quality";
 $string['size_desc']    = "Video quality : 240, 480 ou 720.";
 $string['size_help']    = "Video quality : 240, 480 or 720.<br> (default value = 480).";

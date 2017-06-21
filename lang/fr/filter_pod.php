@@ -1,10 +1,10 @@
 <?php // $Id$
-// Chaînes FR pour filter/PodLille1.
+// Chaînes FR pour filter/Pod.
 
-$string['filtername']   = "Conversion des URLs PodLille1";
+$string['filtername']   = "Conversion des URLs Pod";
 $string['url']          = "URL";
 $string['url_desc']     = "URL du serveur POD, sans http(s)://.";
-$string['url_help']     = "Il s'agit de de l'URL du serveur POD servant les vidéos.<br> (valeur par defaut = pod.univ-lille1.fr)";
+$string['url_help']     = "Il s'agit de de l'URL du serveur POD servant les vidéos.<br> (valeur par defaut = pod.univ.fr)";
 $string['size']         = "Qualité de la vidéo";
 $string['size_desc']    = "Qualité de la vidéo : 240, 480 ou 720.";
 $string['size_help']    = "Qualité de la vidéo : 240, 480 ou 720.<br> (valeur par défaut = 480).";
