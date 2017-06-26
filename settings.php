@@ -28,7 +28,7 @@ if ($ADMIN->fulltree) {
     // Video quality (240, 480, 720)
     $settings->add(new admin_setting_configtext('filter_pod_size',
                 get_string('size', 'filter_pod'),
-                get_string('size_desc', 'filter_pod'), '480', PARAM_NOTAGS));
+                get_string('size_desc', 'filter_pod'), '240', PARAM_NOTAGS));
     // Width of the video in px
     $settings->add(new admin_setting_configtext('filter_pod_width',
                 get_string('width', 'filter_pod'),
