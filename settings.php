@@ -24,7 +24,7 @@ if ($ADMIN->fulltree) {
     // Url of pod server that deserve the video
     $settings->add(new admin_setting_configtext('filter_pod_url',
                 get_string('url', 'filter_pod'),
-                get_string('url_desc', 'filter_pod'), 'pod.univ-lille1.fr', PARAM_NOTAGS));
+                get_string('url_desc', 'filter_pod'), 'pod.univ.fr', PARAM_NOTAGS));
     // Video quality (240, 480, 720)
     $settings->add(new admin_setting_configtext('filter_pod_size',
                 get_string('size', 'filter_pod'),
@@ -32,9 +32,9 @@ if ($ADMIN->fulltree) {
     // Width of the video in px
     $settings->add(new admin_setting_configtext('filter_pod_width',
                 get_string('width', 'filter_pod'),
-                get_string('width_desc', 'filter_pod'), '854', PARAM_NOTAGS));
+                get_string('width_desc', 'filter_pod'), '640', PARAM_NOTAGS));
     // Height of the video in px
     $settings->add(new admin_setting_configtext('filter_pod_height',
                 get_string('height', 'filter_pod'),
-                get_string('height_desc', 'filter_pod'), '480', PARAM_NOTAGS));
+                get_string('height_desc', 'filter_pod'), '360', PARAM_NOTAGS));
 }
