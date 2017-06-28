@@ -90,7 +90,9 @@ class filter_pod extends moodle_text_filter {
 		// Prevent tag a href or video source
 		$text = preg_replace('/(<a href="|<video.*><source src=")(.*)(">.*<\/a>|">.*<\/video>)/', '$2', $text);
 		$iframetagpattern	= '(?P<ifr>iframe\s+src\s*=\s*")?';
-		$podpattern 		= '((?:https?\:)?(?:\/\/)?(?P<pod>'.$word.'\/[a-zA-Z\d\-\/_]*video\/[a-zA-Z\d\-_]+\/))';
+		//$podpattern 		= '((?:https?\:)?(?:\/\/)?(?P<pod>'.$word.'\/[a-zA-Z\d\-\/_]*video\/[a-zA-Z\d\-_]+\/))';
+		$podpattern 		= '((?:https?\:)?(?:\/\/)?(?P<pod>'.$word.'\/[a-zA-Z\d\-\/_]*(video|video_priv)\/([a-zA-Z\d\-\/_]+|[a-zA-Z\d\-_]+\/)))';
+		
 		$parampattern		= '(?:([(\?|\&)a-zA-Z_]*=)([a-zA-Z\d]*))?';
 
 		// They cannot have more of 4 parameters in a pod's video url
