@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later / MIT / Public Domain
  */
 
-$plugin->version   = 2017060200;         
+$plugin->version   = 2017062800;         
 $plugin->requires  = 2016112900;        
-$plugin->release   = '1.0.3';       
+$plugin->release   = '1.0.4';       
 $plugin->component = 'filter_pod';
