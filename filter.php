@@ -31,6 +31,8 @@ class filter_pod extends moodle_text_filter {
 		$config['size']		= 480;
 		$config['width']	= 854;
 		$config['height']	= 480;
+		$config['width_interactive']	= 625;
+		$config['height_interactive']	= 400;
 		$courseconfig = array();
 
 		// We retrieve the current course ID and then retrieve the context in which the filter runs
@@ -87,10 +89,11 @@ class filter_pod extends moodle_text_filter {
 		// Regular expression for defined a standard pod's url and avoid those already contained in a iframe
 		$word = addslashes($config['url']);
 		$text = htmlspecialchars_decode($text);
+		echo $text;
 		// Prevent tag a href or video source
 		$text = preg_replace('/(<a href="|<video.*><source src=")(.*)(">.*<\/a>|">.*<\/video>)/', '$2', $text);
 		$iframetagpattern	= '(?P<ifr>iframe\s+src\s*=\s*")?';
-		//$podpattern 		= '((?:https?\:)?(?:\/\/)?(?P<pod>'.$word.'\/[a-zA-Z\d\-\/_]*video\/[a-zA-Z\d\-_]+\/))';
+
 		$podpattern 		= '((?:https?\:)?(?:\/\/)?(?P<pod>'.$word.'\/[a-zA-Z\d\-\/_]*(video|video_priv)\/([a-zA-Z\d\-\/_]+|[a-zA-Z\d\-_]+\/)))';
 		
 		$parampattern		= '(?:([(\?|\&)a-zA-Z_]*=)([a-zA-Z\d]*))?';
@@ -155,11 +158,17 @@ function replace_url($matches, $config) {
 			case "?autoplay=":
 				$autoplay 	= "&autoplay=".current($matches);
 				break;
+			case "&interactive=":
+			case "?interactive=":
+				$interactive 	= "&interactive=".current($matches);
+				$width 		= ' width="'.$config['width_interactive'].'" ';
+	            $height 	= ' height="'.$config['height_interactive'].'" ';
+				break;
 		}
 	}
 
 	// We return the filtered url in a iframe with all the parameters
-	return '<iframe src="//'.$u.'?is_iframe=true'.$size.$start.$autoplay.'"'.$width.$height.' style="padding: 0; margin: 0; border: 0" allowfullscreen></iframe>';
+	return '<iframe src="//'.$u.'?is_iframe=true'.$size.$start.$autoplay.$interactive.'"'.$width.$height.' style="padding: 0; margin: 0; border: 0" allowfullscreen></iframe>';
 }
 
 /**
