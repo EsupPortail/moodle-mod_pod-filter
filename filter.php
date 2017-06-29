@@ -89,7 +89,6 @@ class filter_pod extends moodle_text_filter {
 		// Regular expression for defined a standard pod's url and avoid those already contained in a iframe
 		$word = addslashes($config['url']);
 		$text = htmlspecialchars_decode($text);
-		echo $text;
 		// Prevent tag a href or video source
 		$text = preg_replace('/(<a href="|<video.*><source src=")(.*)(">.*<\/a>|">.*<\/video>)/', '$2', $text);
 		$iframetagpattern	= '(?P<ifr>iframe\s+src\s*=\s*")?';
