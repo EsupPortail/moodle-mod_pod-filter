@@ -160,8 +160,10 @@ function replace_url($matches, $config) {
 			case "&interactive=":
 			case "?interactive=":
 				$interactive 	= "&interactive=".current($matches);
-				$width 		= ' width="'.$config['width_interactive'].'" ';
-	            $height 	= ' height="'.$config['height_interactive'].'" ';
+				if(current($matches)=="true") {
+				    $width 		= ' width="'.$config['width_interactive'].'" ';
+	                $height 	= ' height="'.$config['height_interactive'].'" ';
+	            }
 				break;
 		}
 	}
