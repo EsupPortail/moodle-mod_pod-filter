@@ -21,12 +21,12 @@ defined('MOODLE_INTERNAL') || die();
  *
  * @package    filter
  * @subpackage pod
- * @copyright  2017 Joël Obled
- * @author     Obled Joel <joel.obled@univ-lille1.fr>
+ * @copyright  2017 Joël Obled / Nicolas Can
+ * @author     Obled Joel <joel.obled@univ-lille1.fr> / Nicolas Can <nicolas.can@univ-lille1.fr>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later / MIT / Public Domain
  */
 
-$plugin->version   = 2017062900;         
+$plugin->version   = 2017062901;         
 $plugin->requires  = 2016112900;        
-$plugin->release   = '1.0.6';       
+$plugin->release   = '1.0.7';       
 $plugin->component = 'filter_pod';
