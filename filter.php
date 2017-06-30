@@ -32,7 +32,7 @@ class filter_pod extends moodle_text_filter {
 		$config['width']	= 854;
 		$config['height']	= 480;
 		$config['width_interactive']	= 625;
-		$config['height_interactive']	= 400;
+		$config['height_interactive']	= 530;
 		$courseconfig = array();
 
 		// We retrieve the current course ID and then retrieve the context in which the filter runs
@@ -141,6 +141,7 @@ function replace_url($matches, $config) {
 	$size 		= '&size='.$config['size'];
 	$autoplay	= '';
 	$start		= '';
+	$interactive= '';
 
 	// We retrieve the possible parameters in the video url 
 	while(list(, $m)=each($matches)) {
