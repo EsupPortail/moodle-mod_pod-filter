@@ -27,6 +27,6 @@ defined('MOODLE_INTERNAL') || die();
  */
 
 $plugin->version   = 2017063000;         
-$plugin->requires  = 2016112900;        
+$plugin->requires  = 2016052300;        
 $plugin->release   = '1.0.8';       
 $plugin->component = 'filter_pod';
